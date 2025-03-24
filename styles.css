@@ -1,0 +1,246 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: linear-gradient(45deg, #ff5733, #4cee5f);
+
+    background-color:#FF5733;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+/* Apply styles only to the logo image inside the .logo class */
+.logo img {
+    height: auto; /* Set the height of the logo */
+    width: 150px;  /* Set the width of the logo */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    border-radius: 50%; /* Optional: Make the logo circular */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fcf7f7;
+    padding: 10px;
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #a0cd26;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav ul li:hover .dropdown-menu {
+    display: block;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.content {
+    flex: 3;
+    margin-right: 20px;
+    background: rgb(161, 245, 175);
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #cee1b7;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #270670;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gallery-container img {
+    max-width: 100%;
+    height: auto;
+    flex: 1 1 calc(33.333% - 20px);
+}
+
+.order-form {
+    margin-top: 20px;
+}
+
+.order-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-form label {
+    margin-top: 10px;
+}
+
+.order-form input, .order-form select, .order-form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.order-form button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.order-list {
+    margin-top: 20px;
+}
+
+.order-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.order-controls button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reviews-system {
+    margin-top: 20px;
+    background: #bee094;
+   
+}
+
+.reviews-system form {
+    display: flex;
+    flex-direction: column;
+}
+
+.reviews-system label {
+    margin-top: 10px;
+}
+
+.reviews-system input, .reviews-system select, .reviews-system textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.reviews-system button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ffc107;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #065e13;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .content {
+        margin-right: 0;
+    }
+
+    .gallery-container img {
+        flex: 1 1 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container img {
+        flex: 1 1 100%;
+    }
+
+    .order-controls {
+        flex-direction: column;
+    }
+
+    .order-controls button {
+        width: 100%;
+    }
+}
